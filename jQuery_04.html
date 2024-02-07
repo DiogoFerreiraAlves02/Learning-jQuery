@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 04</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #container{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <p id="text"></p>
+
+    <script>
+        $("#container").click(()=>{
+            $("#text").text("The black square was clicked!");
+        })
+        $("#container").mouseenter(()=>{
+            $("#text").text("Mouse entered the black square!");
+        })
+        $("#container").mouseleave(()=>{
+            $("#text").text("Mouse leaved the black square!");
+        })
+        $("#container").mousemove(()=>{
+            $("#text").text("Mouse is moving over the black square!");
+        })
+    </script>
+</body>
+</html>
