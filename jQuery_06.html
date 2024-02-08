@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 05</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #container{
+            width: 200px;
+            height: 200px;
+            background-color: #000;
+        }
+        #container2{
+            width: 200px;
+            height: 200px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-around;">
+        <div id="container"></div>
+        <div id="container2"></div>
+    </div>
+    <p id="text"></p>
+
+    <script>
+        $("#container").on({
+            click: ()=>{$("#text").text("The square was clicked!");},
+            mouseenter: ()=>{$("#text").text("Mouse entered the square!");},
+            mouseleave: ()=>{$("#text").text("Mouse leaved the square!");},
+            dblclick: ()=>{$("#text").text("The square was double clicked!");},
+        })
+        
+        $("#container2").click(()=>{
+            $("#container").trigger("click");
+        });
+
+    </script>
+</body>
+</html>
