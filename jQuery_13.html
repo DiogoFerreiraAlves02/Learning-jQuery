@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 13</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <h3>
+                Diogo Alves
+            </h3>
+            <p>
+                jQuery
+            </p>
+            <h2>
+                Siblings Selector
+            </h2>
+            <p>
+                I'm a p
+            </p>
+        </span>
+    </div>
+
+    <script>
+        $("h2").siblings().css({"border":"1px solid #f00"})
+        // $("h2").siblings("p").css({"border":"1px solid #f00"})
+        // $("h2").next().css({"border":"1px solid #f00"})
+        // $("h2").prev().css({"border":"1px solid #f00"})
+        // $("h2").prevAll().css({"border":"1px solid #f00"})
+        // $("h2").prevUntil("h3").css({"border":"1px solid #f00"})
+    </script>
+</body>
+</html>
