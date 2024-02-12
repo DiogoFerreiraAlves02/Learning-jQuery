@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 16</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>Diogo Alves</h2>
+        <p>Lorem ipsum</p>
+    </div>
+    
+    <h2>jQuery</h2>
+    <input type="text" id="name">
+    <script>
+        // $("#box").click(function(){
+        //     alert(`Text: ${$(this).text()}`)
+        // })
+        // $("#name").click(function(){
+        //     alert(`Text: ${$(this).val()}`)
+        // })
+        $("#box").click(function(){
+            alert(`Text: ${$(this).html()}`)
+        })
+    </script>
+</body>
+</html>

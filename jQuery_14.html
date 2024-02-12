@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 14</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    
+    <p>Diogo Alves</p>
+    <h3>Diogo Alves</h3>
+    <p>jQuery</p>
+    <h3>jQuery</h3>
+    <p>Filter elements</p>
+    <h3>Filter elements</h3>
+    <p>Lorem ipsum</p>
+    <h3>Lorem ipsum</h3>
+    <p>sit amet consectetur</p>
+    <h3>sit amet consectetur</h3>
+
+    <script>
+        $("p").first().css({"border":"1px solid #f00", "background-color":"#ffa"})
+        $("p").last().css({"border":"1px solid #f00", "background-color":"#afa"})
+        $("p").eq(2).css({"border":"1px solid #f00", "background-color":"#aaf"})
+    </script>
+</body>
+</html>
