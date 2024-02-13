@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 17</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .red{
+            border: 1px solid #000; 
+            width: 200px; 
+            height: 200px;
+            background-color: #f00;
+        }
+        .blue{
+            border: 1px solid #000; 
+            width: 200px; 
+            height: 200px;
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" class="red">
+        <h2>Diogo Alves</h2>
+        <p>jQuery</p>
+    </div>
+    <button id="btn_red">Red</button>
+    <button id="btn_blue">Blue</button>
+    <script>
+        $("#btn_red").click(
+            function(){
+                $("#box").attr("class","red")
+            }
+        )
+        $("#btn_blue").click(
+            function(){
+                $("#box").attr("class","blue")
+            }
+        )
+    </script>
+</body>
+</html>

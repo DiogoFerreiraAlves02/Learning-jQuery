@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 19</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #box{
+            border: 1px solid #000; 
+            width: 200px; 
+            height: 200px;
+            background-color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>Diogo Alves</h2>
+        <p>jQuery</p>
+    </div>
+    <button id="btn_show_hide">Hide</button>
+    <script>
+        $("#btn_show_hide").click(
+            function(){
+                $("#box").toggle()
+                if($("box").is(":visible")){
+                    $("#btn_show_hide").text("Hide")
+                }else{
+                    $("#btn_show_hide").text("Show")
+                }
+            }
+        )
+    </script>
+</body>
+</html>
