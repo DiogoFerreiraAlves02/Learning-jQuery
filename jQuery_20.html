@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 20</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        #box{
+            border: 1px solid #000; 
+            width: 200px; 
+            height: 200px;
+            background-color: #aaa;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>Diogo Alves</h2>
+        <p>jQuery</p>
+    </div>
+    <button id="btn_increase">Increase</button>
+    <button id="btn_decrease">Decrease</button>
+    <button id="btn_left">Left</button>
+    <button id="btn_right">Right</button>
+
+    <script>
+        $("#btn_increase").click(
+            function(){
+                $("#box").animate({width:"500px", height:"500px"},{duration:3000})
+            }
+        )
+        $("#btn_decrease").click(
+            function(){
+                $("#box").animate({width:"200px"},{duration:200}).animate({height:"200px"},{duration:200})
+            }
+        )
+        $("#btn_right").click(
+            function(){
+                $("#box").animate({left:"500px"},{duration:1000, complete:()=>{alert("Movement ended!")}})
+            }
+        )
+        $("#btn_left").click(
+            function(){
+                $("#box").animate({left:"0px"},{duration:1000})
+            }
+        )
+    </script>
+</body>
+</html>
