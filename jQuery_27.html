@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 27</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        .box{
+            width: 100px; 
+            height: 100px;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btn_increase">Increase</button>
+        <button id="btn_decrease">Decrease</button>
+    </p>
+    <p>
+        <button id="btn_finish">Finish</button>
+    </p>
+    <p id="info">0</p>
+
+    <div id="box" class="box">
+    </div>
+
+    <script>
+        $("#btn_increase").click(
+            function(){
+                $("#box").animate({width:"800px"},{duration:5000,complete:()=>{$("#info").text($("#box").queue().length)}})
+                $("#info").text($("#box").queue().length)
+            }
+        )
+        $("#btn_decrease").click(
+            function(){
+                $("#box").animate({width:"100px"},{duration:5000,complete:()=>{$("#info").text($("#box").queue().length)}})
+                $("#info").text($("#box").queue().length)
+            }
+        )
+        $("#btn_finish").click(
+            function(){
+                $("#box").finish()
+            }
+        )
+        
+    </script>
+</body>
+</html>

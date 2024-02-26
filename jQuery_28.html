@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - 28</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .menu{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+        }
+        #menus{
+            background-color: #888;
+            display: flex;
+            width: 100%;
+        }
+        .btnMenu{
+            margin: 5px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        #control{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #888;
+            padding: 5px;
+            border-radius: 0 0 10px 10px;
+            margin-left: 10px;
+            margin-right: auto;
+        }
+        #control button{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="menu" class="menu">
+        <div id="menus">
+            <button class="btnMenu">Home</button>
+            <button class="btnMenu">jQuery</button>
+            <button class="btnMenu">C#</button>
+            <button class="btnMenu">Python</button>
+            <button class="btnMenu">About</button>
+        </div>
+        <div id="control">
+            <button id="btnUp">Hide</button>
+            <button id="btnDown">Show</button>
+            <p id="msg">Displayed</p>
+        </div>
+    </div>
+
+    <script>
+        $("#btnUp").click(
+            function(){
+                $("#menus").slideUp(1000,()=>{$("#msg").text("Hidden")});
+            }
+        )
+        $("#btnDown").click(
+            function(){
+                $("#menus").slideDown(1000,()=>{$("#msg").text("Displayed")});
+            }
+        )
+    </script>
+</body>
+</html>
