@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery - 24</title>
+    <title>jQuery - 25</title>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <style>
         *{
@@ -25,33 +25,84 @@
             align-items: center;
             width: 30px;
             height: 30px;
+            margin: 10px;
             border-radius: 10px;
             padding: 30px;
-            background-color: #00f;
+            background-color: #128;
+            color: #fff;
+            text-transform: capitalize;
+            cursor: pointer;  
+        }
+        .subMenu{
+            display: none;
+            width: 100%;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .subMenuItem{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 20px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #128;
             color: #fff;
             text-transform: capitalize;
             cursor: pointer;
-            margin: 10px;
+            box-sizing: border-box;
         }
     </style>
 </head>
 <body>
     <div id="menu" class="menu">
         <div class="menuItem">Home</div>
-        <div class="menuItem">jQuery</div>
-        <div class="menuItem">C#</div>
-        <div class="menuItem">Javascript</div>
+        <div id="jqueryMenu" class="menuItem">jQuery</div>
+        <div id="csharpMenu" class="menuItem">C#</div>
+        <div id="jsMenu" class="menuItem">Javascript</div>
+    </div>
+    <div id="subMenu_jquery" class="subMenu">
+        <div class="subMenuItem">jQuery Lessons</div>
+        <div class="subMenuItem">jQuery Material</div>
+    </div>
+    <div id="subMenu_csharp" class="subMenu">
+        <div class="subMenuItem">C# Lessons</div>
+        <div class="subMenuItem">C# Material</div>
+    </div>
+    <div id="subMenu_js" class="subMenu">
+        <div class="subMenuItem">Javascript Lessons</div>
+        <div class="subMenuItem">Javascript Material</div>
     </div>
 
     <script>
         $(".menuItem").mouseover(
             function(){
-                $(this).fadeTo(200,0.2)
+                $(this).fadeTo(200,0.2);
             }
         )
         $(".menuItem").mouseleave(
             function(){
-                $(this).fadeTo(200,1)
+                $(this).fadeTo(200,1);
+            }
+        )
+        $("#jqueryMenu").click(
+            function(){
+                $("#subMenu_jquery").fadeToggle();
+                $("#subMenu_jquery").css("display","flex");
+            }
+        )
+        $("#csharpMenu").click(
+            function(){
+                $("#subMenu_csharp").fadeToggle();
+                $("#subMenu_csharp").css("display","flex");
+            }
+        )
+        $("#jsMenu").click(
+            function(){
+                $("#subMenu_js").fadeToggle();
+                $("#subMenu_js").css("display","flex");
             }
         )
     </script>
